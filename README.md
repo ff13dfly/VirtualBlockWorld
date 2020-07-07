@@ -5,5 +5,5 @@ Virtual World on blockchain and Block.
 http://61.147.107.5:3000
 
 # Chord Autobuild Demo
-http://vbw.qqpi.net/web/
-http://vbw.qqpi.net/admin/
+frontend : http://vbw.qqpi.net/web/
+control panel : http://vbw.qqpi.net/admin/
