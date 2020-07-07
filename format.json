@@ -1,0 +1,29 @@
+{
+    "Basic": {
+        "raw": "Vec<u8>",
+        "status": "u32",
+        "elevation": "u32",
+        "stamp": "BlockNumber",
+        "owner": "AccountId",
+        "tenant": "AccountId"
+    },
+    "World": {
+        "start": "BlockNumber",
+        "xcount": "u32",
+        "ycount": "u32",
+        "king": "AccountId",
+        "setting": "Setting",
+        "status": "u32"
+    },
+    "Source": {
+        "stamp": "BlockNumber",
+        "hash": "Vec<u8>",
+        "check": "Vec<u8>",
+        "format": "Vec<u8>",
+        "status": "u32",
+        "owner": "AccountId"
+    },
+    "Setting": {
+        "elevation": "u32"
+    }
+}
