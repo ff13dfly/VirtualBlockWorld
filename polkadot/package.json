@@ -75,6 +75,7 @@
     "@types/jquery": "^3.3.35",
     "antd": "^4.2.2",
     "dat.gui": "^0.7.7",
+    "gulp": "^4.0.2",
     "inflate": "^0.0.7",
     "inflate-auto": "^2.0.0",
     "jQuery": "^1.7.4",
