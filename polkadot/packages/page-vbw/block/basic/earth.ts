@@ -7,15 +7,15 @@ const reg={
     version:1,
     default:[],
     setting:{
-        height:0.2,     //默认的地板高度
-        texture:1,      //默认的土地贴图
+        height:0.2,     //default ground thick
+        texture:1,      //default earth texture id
     }
 }
 
 const self={
     format:(obj:any,cvt:number)=>{
         //console.log('[earth.ts => format]'+JSON.stringify(obj));
-        let loadTexture:Array<number>=[reg.setting.texture];       //放需要预加载的texture的id值
+        let loadTexture:Array<number>=[reg.setting.texture];       //preload texture ids
         const side=World.side*cvt;
         const h=reg.setting.height*cvt,va=obj.elevation*cvt;
         const data:any={
@@ -34,7 +34,6 @@ const self={
         let geometry:Array<any>=[];
         let light:Array<any>=[];
 
-        //const dt=obj.data;
         const earth={
             type:'box',
             data:[obj.x,obj.y,obj.z],
@@ -63,7 +62,8 @@ const self={
         //index=1;
         return arr[index];
     },
-    /***********功能编辑区域*************/
+
+    /***********edit functions*************/
     guiData:(row:any,cage:Array<number>,cvt:number)=>{
         return {
             //x:{value:row.x,min:reg.limit.min*cvt,max:cage[0]},
@@ -75,7 +75,7 @@ const self={
         console.log(obj)
     },
 
-    /***********earth的基础设置方法****************/
+    /***********basic data operation****************/
     set:(p:any,dt:any)=>{
         if(p.key===undefined || dt[p.key]==undefined) return false;
         if(p.key=='extra'){

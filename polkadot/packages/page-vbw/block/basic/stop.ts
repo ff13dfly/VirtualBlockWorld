@@ -1,5 +1,4 @@
 import {tools,clone} from '../common/tools';
-//import {World} from '../common/setting';
 
 const reg={
     name:'stop',
@@ -12,9 +11,9 @@ const reg={
 }
 
 const way={
-    'BODY_STOP':1,		//stop阻挡在身体上
-    'FOOT_STOP':2,		//stop阻挡在脚下
-    'HEAD_STOP':3,		//stop在头顶之上
+    'BODY_STOP':1,		//stop on player body
+    'FOOT_STOP':2,		//stop on player foot
+    'HEAD_STOP':3,		//stop over player head
 };
 
 interface fmtModule{
@@ -81,7 +80,7 @@ const self={
                 cfg:{
                     color:'#FF0000',
                     opacity:0.5,
-                    edge:true,          //显示边缘
+                    edge:true,          //show stop outline
                 },
                 info:{type:reg.name,id:i},
             };
@@ -90,19 +89,19 @@ const self={
         return {geometry:geometry,light:light,elevation:va};
     },
     check:(cfg:any,stops:Array<any>)=>{
-		let rst:any={empty:true,stop:false,id:-1}		//stop关系的信号系统
+		let rst:any={empty:true,stop:false,id:-1}		//stop check result object
 		if(stops.length<1) return rst;
         
         const [dx,dy,dz]=cfg.pos;
-		const list=self.inStopProject(dx,dy,stops);		//1.计算在垂直投影中的stop
-		if(tools.empty(list)) return rst;						//2.未和任何stop发生关系
-        rst.empty=false;											//
+		const list=self.inStopProject(dx,dy,stops);		//1.check is in stop on plan
+		if(tools.empty(list)) return rst;				
+        rst.empty=false;
 			
 		const cap=cfg.cap+(cfg.pre!=undefined?cfg.pre:0),h=cfg.height;
 		const va=cfg.elevation
 
-		const arr=self.zStopCheck(dz,h,cap,va,list);		//3.计算Z轴上发生关系的
-		let fs:any=self.stopFilter(arr);								//4.筛选所有的stop最接近的stop
+		const arr=self.zStopCheck(dz,h,cap,va,list);		//2.check stop on Z-axis
+		let fs:any=self.stopFilter(arr);					//3.get the related stop
 		rst.stop=fs.stop;
 		rst.id=fs.id;
 		if(fs.delta!=undefined)rst.delta=fs.delta;
@@ -139,7 +138,9 @@ const self={
             const st=stops[i];
             const xmin=st.ox-st.x*0.5,xmax=st.ox+st.x*0.5;
             const ymin=st.oy-st.y*0.5,ymax=st.oy+st.y*0.5;
-            if(	(px>xmin && px<xmax) && 		//进入stop的平面投影
+
+            //check player is in stop's planar projection 
+            if(	(px>xmin && px<xmax) && 		
             (py>ymin && py<ymax)){
                 list[i]=st;
             }
@@ -152,13 +153,13 @@ const self={
         let arr=[];
         for(let id in list){
             const st=list[id];
-            const zmin=st.oz-st.z*0.5+va,zmax=st.oz+st.z*0.5+va;		//计算到绝对高度
-            if(zmin>=z+h){											//a.悬在用户头上，不会阻挡
+            const zmin=st.oz-st.z*0.5+va,zmax=st.oz+st.z*0.5+va;    //calc Absolute elevation
+            if(zmin>=z+h){											//a.stop over player's head , won't stop
                 arr.push({stop:false,way:way.HEAD_STOP,id:parseInt(id)})
-            }else if(zmin<z+h && zmin>=z+cap){		//b.挡在用户中间，会阻挡
+            }else if(zmin<z+h && zmin>=z+cap){		//b.will stop,in the way of player
                 arr.push({stop:true,way:way.BODY_STOP,id:parseInt(id)})
-            }else{	//在用户脚下
-                var zd=zmax-z;		//c.阻拦体和用户之间的高度差
+            }else{	    //3.player on the stop, need more check
+                const zd=zmax-z;		//c.height between stop and player
                 if(zd>cap){
                     arr.push({stop:true,way:way.FOOT_STOP,id:parseInt(id)})
                 }else{
@@ -198,7 +199,7 @@ const self={
         ]
     },
 
-    /******todo操作调用的部分，基础数据修改部分*****/
+    /******  basic data operation *****/
     add:(p:any,dt:Array<any>)=>{
         dt.push(self.data(p));
         return dt;
@@ -231,7 +232,7 @@ const self={
         return dd;
     },
 
-    //修正位置的方法,处理数据超限问题
+    //fix stop data to fit the block limit
     revise:(p:any,data:Array<any>,limit:Array<number>)=>{		
         let reviseSizeOffset=tools.reviseSizeOffset
         if(p.x!=undefined){

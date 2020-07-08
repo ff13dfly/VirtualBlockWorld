@@ -1,5 +1,5 @@
 
-//面积计算方法
+//calc area by points
 function area(ps:Array<Array<number>>){
     let len=ps.length,mj=0;
     if(len<3) return 0;
@@ -15,6 +15,7 @@ function area(ps:Array<Array<number>>){
     return mj;
 }
 
+//calc padding of points
 function padding(ps:Array<Array<number>>){
     let pad:Array<number>=[0,0,0,0];
     for(let i=0,len=ps.length;i<len;i++){

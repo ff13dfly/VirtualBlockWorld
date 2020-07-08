@@ -1,6 +1,6 @@
 
 
-//预定义的grid的颜色配置
+//color of the axis
 const gridColor:any={       
     'x':'#990000',
     'y':'#009900',
@@ -83,13 +83,14 @@ const self={
         }
         return lines;
     },
-    /*取box定义面上的4个角点
-	 *@param	start		array		//[x,y,z],block的定位点
-	 * @param	size		array		//[x,y,z],box的尺寸
-	 * @param	offset	array		//[ox,oy,oz],box相对于start的偏移
-	 * @param	face		string		//['x','y','z','-x','-y','-z']中的一个
+
+    /*calc the contact face cornor points
+	 *@param	start		array		//[x,y,z],object box position
+	 * @param	size		array		//[x,y,z],object box size
+	 * @param	offset	array		    //[ox,oy,oz],object box offset related with the param start
+	 * @param	face		string		//['x','y','z','-x','-y','-z'],one in the axis array
 	 * return
-	 * {leftTop:point,rightTop:point,leftBottom:point,rightBottom:point}	//4个角点的位置
+	 * {leftTop:point,rightTop:point,leftBottom:point,rightBottom:point}	//cornor point result
 	 * */
 	points:function(start:Array<number>,size:any,offset:any,face:string){
 		const len=face.length,f=len==1?face:face[1];
@@ -147,7 +148,7 @@ const self={
 	},
 }
 
-//定义好helper配置部分的参数
+//helper config definetion
 interface helperConfig{
     offsetX:number,
     offsetY:number,
@@ -162,15 +163,15 @@ interface target{
 }
 
 /*绘制辅助线的入口，在3D的object里按照指定面显示辅助线和吸附点
-*@param target  3Dobject                //标准的3d对象{size:{x:0,y:0,z:0},position:{x:0,y:0,z:0},rotation:{x:0,y:0,z:0}}
-*@param face    string                  //[x,y,z,-x,-y,-z]中的一个
-*@param cage    array                   //[wx,wy,wz]类型的数组，显示grid的范围
-*@param cfg     object:LadderConfig     //ladder的配置
+*@param target  3Dobject                //standard 3D object {size:{x:0,y:0,z:0},position:{x:0,y:0,z:0},rotation:{x:0,y:0,z:0}}
+*@param face    string                  //[x,y,z,-x,-y,-z],axis selected
+*@param cage    array                   //[wx,wy,wz],limit of the helper
+*@param cfg     object:LadderConfig     //ladder config
 *return
 *标准的3D解析结构
 */
 function helper(target:target,face:string,cage:any,cfg:helperConfig,pcfg:any=pointConfig){
-    let geometry:Array<any>=[];     //输出结果
+    let geometry:Array<any>=[];     //result:three.js object array
     const {size,position,rotation}=target;
     const cvt=cfg.convert,bc=pcfg.width*cvt;
 

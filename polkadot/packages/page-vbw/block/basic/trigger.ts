@@ -1,5 +1,3 @@
-
-
 const reg={
     name:"trigger",
     type:"basic",
