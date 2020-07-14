@@ -162,7 +162,7 @@ interface target{
     rotation:{x:number,y:number,z:number},
 }
 
-/*绘制辅助线的入口，在3D的object里按照指定面显示辅助线和吸附点
+/*helper grid of 3D object , on the face of target object
 *@param target  3Dobject                //standard 3D object {size:{x:0,y:0,z:0},position:{x:0,y:0,z:0},rotation:{x:0,y:0,z:0}}
 *@param face    string                  //[x,y,z,-x,-y,-z],axis selected
 *@param cage    array                   //[wx,wy,wz],limit of the helper
