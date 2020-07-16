@@ -63,7 +63,7 @@ const self={
         return arr[index];
     },
 
-    /***********edit functions*************/
+    /*********** edit functions *************/
     guiData:(row:any,cage:Array<number>,cvt:number)=>{
         return {
             //x:{value:row.x,min:reg.limit.min*cvt,max:cage[0]},
@@ -75,7 +75,7 @@ const self={
         console.log(obj)
     },
 
-    /***********basic data operation****************/
+    /*********** basic data operation ****************/
     set:(p:any,dt:any)=>{
         if(p.key===undefined || dt[p.key]==undefined) return false;
         if(p.key=='extra'){

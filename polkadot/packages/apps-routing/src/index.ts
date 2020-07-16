@@ -30,6 +30,7 @@ import treasury from './treasury';
 
 import vbw from './vbw';
 import resource from './resource';
+import chord from './chord';
 
 const setup: Routing = {
   default: 'explorer',

@@ -13,6 +13,7 @@ import Summary from './Summary';
 import Texture from './Texture';
 import Module from './Module';
 import Pano from './Pano';
+import Chord from './Chord';
 import {Run} from './common/runtime';
 
 function ResourceApp ({basePath,className}: Props): React.ReactElement<Props> {
@@ -34,6 +35,10 @@ function ResourceApp ({basePath,className}: Props): React.ReactElement<Props> {
     {
       name: 'pano',
       text: '全景天空'
+    },
+    {
+      name: 'chord',
+      text: '弦粒子'
     }
   ], []);
 
@@ -55,6 +60,7 @@ function ResourceApp ({basePath,className}: Props): React.ReactElement<Props> {
         <Route path={`${basePath}/texture`}><Texture /></Route>
         <Route path={`${basePath}/module`}><Module /></Route>
         <Route path={`${basePath}/pano`}><Pano /></Route>
+        <Route path={`${basePath}/chord`}><Chord /></Route>
         <Route>
           <Summary />
         </Route>
