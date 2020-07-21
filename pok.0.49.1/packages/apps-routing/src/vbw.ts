@@ -4,22 +4,21 @@
 
 import { Route } from './types';
 
-import Template from '@polkadot/app-vbw';
+import Component from '@polkadot/app-vbw';
 
-const route: Route = {
-  Component: Template,
-  display: {
-    isHidden: false,
-    needsAccounts: false,
-    // needsApi: [
-    //   'tx.balances.transfer'
-    // ]
-  },
-  i18n: {
-    defaultValue: '虚块世界'
-  },
-  icon: 'th',
-  name: 'VBW'
-};
-
-export default route;
+export default function create (t: <T = string> (key: string, text: string, options: { ns: string }) => T): Route {
+  return {
+    Component,
+    display: {
+      isHidden: false,
+      needsAccounts: false,
+      needsApi: [
+        'tx.balances.transfer'
+      ]
+    },
+    icon: 'th',
+    name: 'VBW',
+    //text: t<string>('nav.123-code', 'Template', { ns: 'apps-routing' })
+    text: t<string>('nav.123-code', 'Template', { ns: 'apps-routing' })
+  };
+}
