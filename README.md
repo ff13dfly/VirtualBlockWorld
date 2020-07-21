@@ -1,5 +1,5 @@
 
-![logo](/Users/fuzhongqiang/Desktop/www/VirtualBlockWorld/bluemap/static/vbw.png)
+![logo](bluemap/static/vbw.png)
 
 Edition:	[English](bluemap/EN.md) 	[Chinese](bluemap/CN.md)
 
