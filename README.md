@@ -3,10 +3,29 @@
 
 Edition:	[English](bluemap/EN.md) 	[Chinese](bluemap/CN.md)
 
-# WHY
-Virtual World is amazing idea.
+
+
+# Publish
+
+* Auction
+
+* Rehearsal
+
+* Running
+
+* Schedule
+
+
+
+# Bluemap
+
+* Develop
+* Content
+
+
 
 # Demo by 2020.07.07
+
 http://61.147.107.5:3000
 
 # Chord Autobuild Demo
