@@ -56,7 +56,7 @@
 
 * [Module说明](cn/module.md)
 
-* [Coin流通说明](cn/coin.md)
+* [Coin说明](cn/coin.md)
 
 * [Avatar说明](cn/avatar.md)
 
@@ -76,10 +76,6 @@
 
   
 
-## 世界发行
-
-* 
-
 ## 治理结构
 
 虚块世界的治理将借鉴substrate的方式，逐步的实现去中心化，让网络能够自治。虚块世界的构成，支持多种治理结构共存，示意图如下：
@@ -88,12 +84,5 @@
 
 * Stage 2: 议会治理时代
 
-* Stage 3: 令人琢磨不透的未来
+* Stage 3: 未知的未来
 
-  
-
-## 程序开发
-
-[程序构架](bluemap/cn/struct.md)
-
-* 
