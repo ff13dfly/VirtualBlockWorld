@@ -66,13 +66,13 @@
 
 * [世界管理](cn/management.md)
 
-* [Module说明](cn/module.md)
-
 * [Coin说明](cn/coin.md)
 
 * [Avatar说明](cn/avatar.md)
 
 * [程序构架](cn/struct.md)
+
+* [Module说明](cn/module.md)
 
 * [资源文件](cn/resource.md)
 
