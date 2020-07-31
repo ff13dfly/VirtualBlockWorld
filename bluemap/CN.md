@@ -2,6 +2,8 @@
 
 虚块世界是一个由土地（Block）构成的虚拟世界，每块土地上的数据渲染成3D环境，这些数据都妥善的保存在区块链上，在虚块世界专用的私链上。
 
+![虚块世界Logo](static/logo.png)
+
 
 
 ## Why
@@ -40,7 +42,7 @@
 
 
 
-![治理结构示意图](static/relation.jpg)
+![治理结构示意图](static/relation_cn.jpg)
 
 整体的治理关系
 
