@@ -1,8 +1,6 @@
 # 虚块世界组件（Module）说明
 
-用于处理Block的raw节点数据的功能实现，
-
-例如，以下保存在Block的raw节点的数据，解析如下图：
+用于处理Block的raw节点数据的功能实现，例如，以下保存在Block的raw节点的数据，Substrate部分保存为vec<u8>。
 
 ```
 {
@@ -16,6 +14,10 @@
 	],
 }
 ```
+
+前端渲染的结果如下：
+
+![渲染结果]()
 
 
 
@@ -35,7 +37,7 @@
 
 组件通过substrate端的验证、存储，Polkadot端的验证、解析、显示。
 
-![构成示意图](../static/module.jpg)
+![构成示意图](../static/module_en.jpg)
 
 
 
