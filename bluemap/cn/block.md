@@ -8,7 +8,7 @@
 
 * 世界拍卖的方式
 * 购买的方式
-* 拾取的方式
+* 拾取的方式，处于废弃的状态的土地
 
 
 
@@ -18,12 +18,12 @@
 
 ```
 {
-	raw: Vec<u8>,   				//block raw data
-	status: u32,						//block status:[normal,private,gift,abandoned,selling,renting]
-	elevation: u32, 				//block elevation
-	stamp: BlockNumber,     //block update timestamp:blocknumber
-	owner: UserID,       		//block owner:  AccountId
-	tenant: UserID,     	 	//block tenant: AccountId
+	raw: 				Vec<u8>,   			//模块处理数据，3D空间呈现的数据都放置在这里
+	status: 		u32,						//土地状态
+	elevation: 	u32, 						//土地海拔高度
+	stamp: 			BlockNumber,    //土地最新更新的区块号
+	owner: 			UserID,       	//土地所有者
+	tenant: 		UserID,     	 	//土地租赁者
 }
 ```
 
