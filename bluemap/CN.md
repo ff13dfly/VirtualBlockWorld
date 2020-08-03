@@ -40,17 +40,29 @@
 
 
 
-![世界构成示意图](static/summary.png)
+单个世界的构成，如下图所示
 
-3D显示部分，数据和显示的对应关系
+![世界构成示意图](static/single_cn.jpg)
 
 
+
+
+
+3D显示虚块世界的效果，如下图所示：
+
+![3D现实](static/three_cn.png)
+
+
+
+整个虚块世界的治理关系，如下图所示：
 
 ![治理结构示意图](static/relation_cn.jpg)
 
-整体的治理关系
 
 
+单个世界的治理结果，如下图所示：
+
+![单个世界治理](static/governance_cn.jpg)
 
 ### 虚块世界治理
 
