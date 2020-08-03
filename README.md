@@ -1,5 +1,5 @@
 
-![logo](bluemap/static/vbw.png)
+![logo](bluemap/static/logo.png)
 
 Edition:	[English](bluemap/EN.md) 	[Chinese](bluemap/CN.md)
 
