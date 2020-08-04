@@ -69,12 +69,12 @@ The governance of the single VBW world is shown in the following figure:
 VBW, drawing on the principle of separation of powers, realizes decentralized management through the following three organizations.
 
 * Governance Committee : management of distribution, development planning , the roadmap of VBW.
-* Appeal Committee : dealing with the problems in the operation and solve the disputes among players.
+* Arbitration Committee : dealing with the problems in the operation and solve the disputes among players.
 * Technical Committee : coding or subcontracting  implementation of VBW, automatic execution of certain rules.
 
 VBW will take three years to realize the transition from individual governance to decentralized governance, which will go through three stages: Founder governance, Veto governance and Decentralization governance. The corresponding is the promotion of technology development, the realization of test network, and finally, give the players an open and colorful virtual world.
 
-Ideally, the proceeds from the new VBW world publish would be used to pay for the three committees. The Governance Committee and Appeal Committee needs the management costs, and the Technical Committee needs the management costs and development costs, forming a virtuous circle and building a self consistent ecosystem.
+Ideally, the proceeds from the new VBW world publish would be used to pay for the three committees. The Governance Committee and Arbitration Committee needs the management costs, and the Technical Committee needs the management costs and development costs, forming a virtuous circle and building a self consistent ecosystem.
 
 
 
