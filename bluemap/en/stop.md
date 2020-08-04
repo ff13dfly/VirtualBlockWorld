@@ -7,16 +7,16 @@
 
 ## Definition
 
-### Version：2020
+### Version : 2020
 
-* Data struct：`[ size(X,Y,Z) , position(X,Y,Z) , rotation(X,Y,Z) , type ]`
-* Sample：`[[3,0.2,3],[12,6,1.5],[0,0,0],1]`
+* Data struct : `[ size(X,Y,Z) , position(X,Y,Z) , rotation(X,Y,Z) , type ]`
+* Sample : `[[3,0.2,3],[12,6,1.5],[0,0,0],1]`
 
 
 
 ## Roadmap
 
-| Notes         | Deadline | Developer | git url |
+| Notes         | Deadline | Developer | GitHub |
 | :------: | :------: | :----: | :------: |
 | storage on chain |  |        |          |
 | stop full function with rotation |          |        |          |
