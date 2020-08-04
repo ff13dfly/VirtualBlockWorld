@@ -2,7 +2,7 @@
 
 "Virtual Block World(VBW)" is a virtual world composed of blocks. The data on each piece of land is rendered into a 3D environment, and these data are properly stored in the private chain dedicated to the VBW. These credible data can replace pictures and words, transmit valuable content, and become a new way of communication.
 
-![虚块世界Logo](/Users/fuzhongqiang/Desktop/www/VirtualBlockWorld/bluemap/static/logo.png)
+![虚块世界Logo](static/logo.png)
 
 
 

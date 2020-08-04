@@ -1,7 +1,7 @@
 
 ![logo](bluemap/static/logo.png)
 
-Details:	[English](bluemap/EN.md) 	[Chinese](bluemap/CN.md)
+Details:	[English edition](bluemap/EN.md) 	[Chinese edition](bluemap/CN.md)
 
 "Virtual Block World(VBW)" is a virtual world composed of blocks. The data on each piece of land is rendered into a 3D environment, and these data are properly stored in the private chain dedicated to the VBW. These credible data can replace pictures and words, transmit valuable content, and become a new way of communication.
 
