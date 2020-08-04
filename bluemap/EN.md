@@ -91,7 +91,7 @@ Ideally, the proceeds from the new VBW world publish would be used to pay for th
 * [Block](en/block.md) : basic component of VBW , each block is 32m * 32m in size and located by coordinates [x, y].
 * [Resource](en/resource.md) : saving external 3D files, images and other large-size files.
 * [Coin](en/coin.md) : circulating in the whole VBW, solving the problems of circulation and payment.
-* [Setting](en/world.md) : adjusting target VBW world parameters.
+* [World-setting](en/world.md) : adjusting target VBW world parameters.
 * [Module](en/module.md) : the smallest unit of functional organization , basing on Substrate/Polkadot.
 * [Avatar](en/avatar.md) : player avatar management module.
 
