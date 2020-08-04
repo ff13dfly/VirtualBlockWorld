@@ -33,7 +33,7 @@ Rending like this:
 
 
 
-## purpose
+## Purpose
 
 * Open definition, data structure definition of components will be managed uniformly, open and transparent. In this way, it can be easily extended to multi platforms.
 
@@ -45,7 +45,7 @@ Rending like this:
 
   
 
-## construct
+## Construct
 
 The module is verified and stored on the substrate side and verified, parsed and displayed on the Polkadot side.
 
@@ -88,7 +88,7 @@ Test the function by yourself. This Demo is not based on substrate now.
 
 
 
-## types
+## Types
 
 Module is an important part of VBW, which can build a rich and colorful virtual world. The following can build a basic 3D environment.
 
