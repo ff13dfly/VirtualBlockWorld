@@ -86,21 +86,21 @@ Ideally, the proceeds from the new VBW world publish would be used to pay for th
 
 
 
-### 虚块世界功能组成
+### Functions of VBW
 
-* [土地Block](cn/block.md)，虚块世界的构成基础，每块的大小为32m*32m，由坐标[X,Y]进行定位。
-* [资源Resource](cn/resource.md)，主要为用于保存外部3D文件、图像等较大尺寸的文件。
-* [代币Coin](cn/coin.md)，在整个虚块世界流通的VBC，解决流通、支付的问题。
-* [世界管理World](cn/world.md)，对世界参数进行调整的功能模块。
-* [组件Module](cn/module.md)，虚块世界多功能实现的基础，通过公开透明精简的数据定义，实现跨平台而又丰富多彩的虚拟世界。
-* [形象Avatar](cn/avatar.md)，虚拟世界用户形象管理模块。
+* [Block](en/block.md) : basic component of VBW , each block is 32m * 32m in size and located by coordinates [x, y].
+* [Resource](en/resource.md) : saving external 3D files, images and other large-size files.
+* [Coin](en/coin.md) : circulating in the whole VBW, solving the problems of circulation and payment.
+* [Setting](en/world.md) : adjusting target VBW world parameters.
+* [Module](en/module.md) : the smallest unit of functional organization , basing on Substrate/Polkadot.
+* [Avatar](en/avatar.md) : player avatar management module.
 
-虚块世界的开发是个长期动态的过程，将逐步实现自洽，将管理功能也存储到链上。
+The development of VBW is a long-term dynamic process, which will gradually realize self consistency and store management functions in the chain.
 
 
 
-### 其他说明
+### More of VBW
 
-* 虚块世界的时间，时间轴采用链的区块号，调整到为现实世界30倍的时间。
-* 虚块世界的账户，使用substrate的账号系统。
+* The time and time axis of the VBW is adjusted to the 30 times of the real world by the block number of the private chain.
+* VBW use the account system of substrate.
 
