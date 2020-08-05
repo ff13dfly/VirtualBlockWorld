@@ -46,7 +46,7 @@ const self:any={
             } 
 
             //2.解析数据，保存好路径
-            server.query.vBlock.sourceMap(id,(res:any)=>{
+            server.query.vbw.sourceMap(id,(res:any)=>{
                 let dt:any=JSON.parse(JSON.stringify(res));
                 if(dt.stamp!=0){
                     dt.format=decode(dt.format);

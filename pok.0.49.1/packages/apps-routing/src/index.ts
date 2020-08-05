@@ -32,8 +32,8 @@ import toolbox from './toolbox';
 import transfer from './transfer';
 import treasury from './treasury';
 
-//import resource from './resource';
-//import vbw from './vbw';
+import resource from './resource';
+import vbw from './vbw';
 
 export default function create (t: <T = string> (key: string, text: string, options: { ns: string }) => T): Routes {
   return appSettings.uiMode === 'light'
@@ -62,8 +62,8 @@ export default function create (t: <T = string> (key: string, text: string, opti
       transfer(t),
       genericAsset(t),
       //null,
-      //vbw(t),
-      //resource(t),
+      vbw(t),
+      resource(t),
       null,
       staking(t),
       democracy(t),

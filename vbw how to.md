@@ -12,9 +12,9 @@ add "pallet-vbw = { version = "0.0.1-alpha.1", default-features = false, path = 
 
 add follow code without any notes.
 
-impl pallet_vbw::Trait for Runtime {
+`impl pallet_vbw::Trait for Runtime {
 ​    type Event = Event;
-}
+}`
 
 add  in 'construct_runtime' expression
 
@@ -34,9 +34,21 @@ get the release verion of polkadot (https://github.com/polkadot-js/apps/releases
 
 2.config the IP binding,find "packages/apps/webpack.base.config.js",find "WebpackPluginServe",add "host"
 
-3.
+3.find 'packages/app-routing/src/'
+add 'vbw.ts' and 'resource.ts'
 
+4.find 'packages/app-routing/src/index.ts'
+add the follow code
+`import resource from './resource';
+import vbw from './vbw';`
 
+5.add pages to the side-menu
+
+6.install packages needed as follow : dat.gui,jszip,lrz,react-cropper
+npm install --save dat.gui
+npm install --save jszip
+npm install --save lrz
+npm install --save react-cropper
 
 /usr/bin/node /data/default/node_modules/.bin/webpack --config /data/default/packages/apps/webpack.config.js
 

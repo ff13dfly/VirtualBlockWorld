@@ -55,7 +55,7 @@ function Summary (): React.ReactElement<Props> {
       let now:any=[];
       
       api.isReady.then(()=>{
-        api.query.vBlock.sourceCount((obj:any)=>{
+        api.query.vbw.sourceCount((obj:any)=>{
           const start=parseInt(obj.words[0])-1;
           setMax(start);
           if(start<1) return setList([]);

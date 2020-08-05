@@ -91,7 +91,7 @@ function Sky (props:Props): React.ReactElement<Props> {
     thumbClick:(id:number)=>{
       
       const decode=tools.decode;
-      api.query.vBlock.sourceMap(id,(dt:any)=>{
+      api.query.vbw.sourceMap(id,(dt:any)=>{
         const sou=JSON.parse(JSON.stringify(dt));
         const hash=decode(sou.hash),format=decode(sou.format);
         const path=Uper.transPath(hash,format);
@@ -110,7 +110,7 @@ function Sky (props:Props): React.ReactElement<Props> {
       let now:any=[];
       const decode=tools.decode;
       api.isReady.then(()=>{
-        api.query.vBlock.sourceCount((obj:any)=>{
+        api.query.vbw.sourceCount((obj:any)=>{
           const start=parseInt(obj.words[0])-1;
           if(start<1) return setData([]);
           let ids:Array<number>=[];
@@ -123,7 +123,7 @@ function Sky (props:Props): React.ReactElement<Props> {
 
           for(let k in ids){
             const id=ids[k];
-            api.query.vBlock.sourceMap(id,(dt:any)=>{
+            api.query.vbw.sourceMap(id,(dt:any)=>{
               const sou=JSON.parse(JSON.stringify(dt));
               const row={
                 id:id,

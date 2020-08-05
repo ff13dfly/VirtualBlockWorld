@@ -96,7 +96,7 @@ function App (): React.ReactElement<Props> {
     thumbClick:(id:number)=>{
       
       const decode=tools.decode;
-      api.query.vBlock.sourceMap(id,(dt:any)=>{
+      api.query.vbw.sourceMap(id,(dt:any)=>{
         const sou=JSON.parse(JSON.stringify(dt));
         const hash=decode(sou.hash),format=decode(sou.format);
         const path=Uper.transPath(hash,format);
@@ -112,7 +112,7 @@ function App (): React.ReactElement<Props> {
     },
     nowPage:()=>{
       api.isReady.then(()=>{
-        api.query.vBlock.sourceCount((obj:any)=>{
+        api.query.vbw.sourceCount((obj:any)=>{
           const start=parseInt(obj.words[0])-1;
           if(start<1) return setData([]);
 

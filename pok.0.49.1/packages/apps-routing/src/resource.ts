@@ -20,6 +20,6 @@ export default function create (t: <T = string> (key: string, text: string, opti
     icon: 'th',
     name: 'Resource',
     //text: t<string>('nav.123-code', 'Template', { ns: 'apps-routing' })
-    text: t<string>('nav.123-code', 'Template', { ns: 'apps-routing' })
+    text: t<string>('nav.123-code', 'Resource', { ns: 'apps-routing' })
   };
 }

@@ -34,7 +34,7 @@ const self={
         let count=0;
         for(let i=0;i<len;i++){
             const bk=bks[i];
-            api.query.vBlock.blockMap(bk,(res:any)=>{
+            api.query.vbw.blockMap(bk,(res:any)=>{
                 const dt=JSON.parse(JSON.stringify(res));
                 const kk=tools.blockCacheKey(bk[0],bk[1],bk[2]);
 
@@ -170,7 +170,7 @@ interface CKSync{
 }
 function syncChain(x:number,y:number,world:number,raw:Array<number>,ck:CKSync){
     const owner='5FLSigC9HGRKVhB9FiEo4Y3koPsNmBmLJbpXg2mp1hXcS59Y';
-    server.tx.vBlock.blockUpdate(x,y,world,raw).signAndSend(owner, (result:any) => {
+    server.tx.vbw.blockUpdate(x,y,world,raw).signAndSend(owner, (result:any) => {
         console.log(`Current status is ${result.status}`);
         if (result.status.isInBlock) {
             console.log(`Transaction included at blockHash ${result.status.asInBlock}`);

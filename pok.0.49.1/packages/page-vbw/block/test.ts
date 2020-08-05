@@ -9,7 +9,7 @@ const self={
         const ids=[1,2];
         for(let i=0,len=ids.length;i<len;i++){
             const id=ids[i];
-            api.query.vBlock.sourceMap(id,(res:any)=>{
+            api.query.vbw.sourceMap(id,(res:any)=>{
                 const dt=JSON.parse(JSON.stringify(res));
                 const path=tools.decode(dt.hash);
                 console.log(path);
