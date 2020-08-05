@@ -116,6 +116,7 @@ members = [
 	"frame/treasury",
 	"frame/utility",
 	"frame/vesting",
+	"frame/vbw",
 	"primitives/allocator",
 	"primitives/application-crypto",
 	"primitives/application-crypto/test",
