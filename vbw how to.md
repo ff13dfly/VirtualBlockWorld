@@ -38,8 +38,6 @@ get the release verion of polkadot (https://github.com/polkadot-js/apps/releases
 
 
 
-
-
 /usr/bin/node /data/default/node_modules/.bin/webpack --config /data/default/packages/apps/webpack.config.js
 
 
