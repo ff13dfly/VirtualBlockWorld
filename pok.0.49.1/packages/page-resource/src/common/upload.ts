@@ -7,7 +7,7 @@ import {tools} from './tools';
 import { ApiPromise } from '@polkadot/api';
 
 const config:any={
-    url:'http://127.0.0.1/VirtualBlockWorld/pok.0.49.1/packages/apps/build/source/save.php?cat=',
+    url:'http://localhost/VirtualBlockWorld/pok.0.49.1/packages/apps/build/source/save.php?cat=',
     //url:'http://61.147.107.5/packages/apps/dist/source/save.php?cat=',
     permit:{
         texture:true,
@@ -56,6 +56,8 @@ const self:any={
     },
     //文件上传到服务器的操作
     toServer:(file:Blob,cfg:any,ck:any)=>{
+        console.log(file);
+
         const ikey='sky';
         const formData = new FormData();
         formData.append('token', cfg.token);
@@ -69,9 +71,12 @@ const self:any={
             type:'post',async:true,processData:false,contentType:false,data:formData,timeout:6000,
             success:(rsp:string)=>{
                 const res=JSON.parse(rsp);
+
+                console.log(res);
+
                 ck && ck(res);
             },
-            error:function (xhr,res) {
+            error:function (xhr:any,res:any) {
                 ck && ck(res);
             }
         });

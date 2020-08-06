@@ -1,7 +1,7 @@
 <?php
      header('Access-Control-Allow-Origin:*');
-     //ini_set("display_errors", "stderr");  //ini_set函数作用：为一个配置选项设置值，
-     //error_reporting(E_ALL);     //显示所有的错误信息
+     ini_set("display_errors", "stderr");  //ini_set函数作用：为一个配置选项设置值，
+     error_reporting(E_ALL);     //显示所有的错误信息
 
      define('DS', DIRECTORY_SEPARATOR);
      define('ORIGIN_FILE_NAME','origin');

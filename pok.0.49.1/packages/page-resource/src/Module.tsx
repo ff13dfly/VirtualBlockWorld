@@ -186,7 +186,7 @@ function App (): React.ReactElement<Props> {
   }, []);
 
   const tmap={width:'100%'},smap={'marginTop':'5px','marginBottom':'15px','fontSize':'16px'}
-  const fmap={float:'right'};
+  //const fmap={float:'right'};
   return (
     <section>
       <table style={tmap}>
@@ -224,12 +224,12 @@ function App (): React.ReactElement<Props> {
                   </td>
                   <td>
                     <Button
-                      icon='paper plane'
+                      //icon='paper'
                       label='上传模型'
                       onClick={self.uploadClick}
-                      size='small'
+                      //size='small'
                       tooltip='上传支持的模型文件[fbx,dae]'
-                      style={fmap}
+                      //style={fmap}
                     />
                   </td>
                 </tr>
@@ -238,17 +238,17 @@ function App (): React.ReactElement<Props> {
             </td>
             <td>
             <Button
-                icon='paper latest'
+                //icon='paper latest'
                 label='最新'
                 //onClick=
-                size='small'
+                //size='small'
                 tooltip='最新的上传的全景列表'
               />
             <Button
-                icon='paper loading'
+                //icon='paper loading'
                 label='更多'
                 //onClick=
-                size='small'
+                //size='small'
                 tooltip='获取更多全景列表'
               />
             </td>

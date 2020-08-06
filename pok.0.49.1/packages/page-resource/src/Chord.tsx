@@ -5,7 +5,8 @@
 //import { BareProps } from '@polkadot/react-components/types';
 
 import React from 'react';
-//import styled from 'styled-components';
+
+import Basic from './chord/basic';
 
 
 //import {useApi} from '@polkadot/react-hooks';
@@ -19,13 +20,21 @@ function Chord (props:Props): React.ReactElement<Props> {
   //const [list, setData] = useState([]);     //列表页的数据及设置方法
   //const [info, setInfo] = useState('');     //出错信息
 
+  const type=1;
+  const cage=[4,4,5];
+  const memo='';
+
   React.useEffect(() => {
   }, []);
 
   //const tmap={width:'100%'},smap={'marginTop':'5px','marginBottom':'15px','fontSize':'16px'}
   return (
     <section>
-      edit chord here...
+      <Basic 
+        type={type}
+        cage={cage}
+        memo={memo}
+      />
     </section>
   );
 }
