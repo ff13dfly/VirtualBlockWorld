@@ -4,23 +4,18 @@
 
 //import { BareProps } from '@polkadot/react-components/types';
 
-//import React, { useState } from 'react';
+import React from 'react';
 //import styled from 'styled-components';
 
-import React,{useState}from 'react';
-import { Button } from '@polkadot/react-components';
 
-import {tools} from './common/tools';
-import {useApi} from '@polkadot/react-hooks';
-//import Editor from './chord/ChordEditor';
-
+//import {useApi} from '@polkadot/react-hooks';
 interface Props {
   accountId?: string | null;
 }
 
 function Chord (props:Props): React.ReactElement<Props> {
 
-  const {api} = useApi();
+  //const {api} = useApi();
   //const [list, setData] = useState([]);     //列表页的数据及设置方法
   //const [info, setInfo] = useState('');     //出错信息
 

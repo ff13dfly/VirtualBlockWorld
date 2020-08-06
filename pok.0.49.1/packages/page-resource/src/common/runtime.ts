@@ -45,7 +45,7 @@ const self:any={
     },
     sync:(id:number,ck:any)=>{
         const decode=tools.decode;
-        server.query.vBlock.sourceMap(id,(dt:any)=>{
+        server.query.vbw.sourceMap(id,(dt:any)=>{
             const sou=JSON.parse(JSON.stringify(dt));
             const row={
               id:id,

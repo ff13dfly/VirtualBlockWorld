@@ -16,6 +16,8 @@
 // limitations under the License.
 
 
+// VBW block functions
+
 const MAX_X: u32 = 2048;    //x coordinate limit
 const MAX_Y: u32 = 2048;    //y coordinate limit
 const MAX_RANGE: u32 = 10;  //range extention limit
@@ -26,6 +28,7 @@ pub struct BlockModule {
 }
 
 impl BlockModule {
+    // test function
     #[allow(dead_code)]
     pub fn hello_world(x: u32, y: u32) -> bool {
         x == y
@@ -44,6 +47,4 @@ impl BlockModule {
             true
         }
     }
-
-    
 }

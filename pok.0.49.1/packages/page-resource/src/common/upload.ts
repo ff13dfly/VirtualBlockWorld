@@ -7,8 +7,8 @@ import {tools} from './tools';
 import { ApiPromise } from '@polkadot/api';
 
 const config:any={
-    //url:'http://localhost/apps/packages/apps/dist/source/save.php?cat=',
-    url:'http://61.147.107.5/packages/apps/dist/source/save.php?cat=',
+    url:'http://127.0.0.1/VirtualBlockWorld/pok.0.49.1/packages/apps/build/source/save.php?cat=',
+    //url:'http://61.147.107.5/packages/apps/dist/source/save.php?cat=',
     permit:{
         texture:true,
         pano:true,
@@ -17,7 +17,7 @@ const config:any={
     step:2,
     depth:4,
     basic:'source/',
-    salt:'saltme,222',
+    salt:'saltme,222',      //as the same as the server
 }
 
 interface cfgUpload{
@@ -36,7 +36,7 @@ const self:any={
         self.getCheckHash(file,(md5:string)=>{
             const suffix=!cfg.suffix?self.getSuffix(file.name):cfg.suffix;
             const encode=tools.encode;
-            api.tx.vBlock.sourceInit(encode(hash),encode(suffix),cfg.owner).signAndSend(cfg.owner, (result:any) => {
+            api.tx.vbw.sourceInit(encode(hash),encode(suffix),cfg.owner).signAndSend(cfg.owner, (result:any) => {
                 console.log(`Current status is ${result.status}`);
                 console.log(result);
                 

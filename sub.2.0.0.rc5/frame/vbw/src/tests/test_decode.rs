@@ -15,17 +15,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
-//decode vbw block raw Vec<u8> to JSON for the future check
-
-#[derive(Clone, Eq, PartialEq, Default)]
-pub struct VbwDecode {
-	
+#[test]
+fn test_hello_world() {
+	let va: u32= 123;
+	let vb: u32= 123;
+	assert_eq!(va,vb);
 }
 
-impl VbwDecode {
-    #[allow(dead_code)]
-    pub fn data_check(){
-		
-	}
+
+// decode block raw data(Vec<u8>) to json
+#[test]
+fn test_decode() {
+	
 }

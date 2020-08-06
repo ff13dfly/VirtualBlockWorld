@@ -15,11 +15,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+pub mod test_decode;
+
 pub mod test_block;
 pub mod test_stop;
 pub mod test_wall;
 pub mod test_importer;
 pub mod test_trigger;
 pub mod test_gift;
-//pub mod test_tree;
+pub mod test_tree;
 
