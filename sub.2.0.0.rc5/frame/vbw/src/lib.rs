@@ -1,3 +1,20 @@
+// This file is part of VBW.
+
+// Copyright (C) 2020 Fuu.
+// SPDX-License-Identifier: Apache-2.0
+
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// 	http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 // Ensure we're `no_std` when compiling for Wasm.
 #![cfg_attr(not(feature = "std"), no_std)]
 
@@ -9,6 +26,10 @@ use sp_std::prelude::*;
 use frame_system::{self as system, ensure_signed};
 use codec::{Encode, Decode};
 
+mod extensions;
+
+#[cfg(test)]
+mod tests;
 
 /// A type alias for the balance type from this pallet's point of view.
 //type BalanceOf<T> = <T as pallet_balances::Trait>::Balance;
@@ -23,7 +44,7 @@ pub trait Trait: pallet_balances::Trait {
 //basic setting
 const MAX_X: u32 = 2048;    //x coordinate limit
 const MAX_Y: u32 = 2048;    //y coordinate limit
-const MAX_RANGE: u32 = 10;  //range extention limit
+//const MAX_RANGE: u32 = 10;  //range extention limit
 //const SIDE_LENGTH:u32=32;   //block side length
 
 //block status definition
@@ -206,8 +227,8 @@ decl_module! {
 		fn block_range(origin,x:u32,y:u32,dx:u32,dy:u32,world:u32) -> DispatchResult {
 			let _sender = ensure_signed(origin)?;
 
-			//1.check range limit
-			ensure!(Self::check_range(x,y,dx,dy),"out of range");
+			//1.check range limitweights::ExtrinsicsWeight
+			ensure!(extensions::block::BlockModule::check_range(x,y,dx,dy),"out of range");
 
 			//2.get the world setting for owner data
 			let wd=Self::world_map(world);
@@ -289,17 +310,17 @@ decl_module! {
 // functions that do not write to storage and operation functions that do.
 // - Private functions. These are your usual private utilities unavailable to other pallets.
 impl<T: Trait> Module<T> {
-	#[allow(dead_code)]
-    fn check_range(x: u32, y: u32, dx: u32, dy: u32) -> bool {
-        if x == 0 || y == 0 {
-            false
-        } else if dx > MAX_RANGE || dy > MAX_RANGE {
-            false
-        } else if x + dx > MAX_X || y + dy > MAX_Y {
-            false
-        } else {
-            true
-        }
-    }
+	//#[allow(dead_code)]
+    // fn check_range(x: u32, y: u32, dx: u32, dy: u32) -> bool {
+    //     if x == 0 || y == 0 {
+    //         false
+    //     } else if dx > MAX_RANGE || dy > MAX_RANGE {
+    //         false
+    //     } else if x + dx > MAX_X || y + dy > MAX_Y {
+    //         false
+    //     } else {
+    //         true
+    //     }
+    // }
 }
 
