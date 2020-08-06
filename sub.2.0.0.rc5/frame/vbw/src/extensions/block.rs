@@ -1,6 +1,6 @@
 // This file is part of VBW.
 
-// Copyright (C) 2020 Fuu.
+// Copyright (C) 2020 Fuu<ff13dfly@163.com>.
 // SPDX-License-Identifier: Apache-2.0
 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,6 +27,12 @@ pub struct BlockModule {
 
 impl BlockModule {
     #[allow(dead_code)]
+    pub fn hello_world(x: u32, y: u32) -> bool {
+        x == y
+    }
+
+    // check block range limit. start from [x,y],x extend dx, y extend dy
+    #[allow(dead_code)]
     pub fn check_range(x: u32, y: u32, dx: u32, dy: u32) -> bool {
         if x == 0 || y == 0 {
             false
@@ -38,4 +44,6 @@ impl BlockModule {
             true
         }
     }
+
+    
 }

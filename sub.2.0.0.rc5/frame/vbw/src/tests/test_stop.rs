@@ -1,6 +1,6 @@
 // This file is part of VBW.
 
-// Copyright (C) 2020 Fuu.
+// Copyright (C) 2020 Fuu<ff13dfly@163.com>.
 // SPDX-License-Identifier: Apache-2.0
 
 // Licensed under the Apache License, Version 2.0 (the "License");

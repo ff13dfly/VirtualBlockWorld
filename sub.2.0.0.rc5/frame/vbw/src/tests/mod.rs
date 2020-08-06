@@ -1,6 +1,6 @@
 // This file is part of VBW.
 
-// Copyright (C) 2020 Fuu.
+// Copyright (C) 2020 Fuu<ff13dfly@163.com>.
 // SPDX-License-Identifier: Apache-2.0
 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +17,9 @@
 
 pub mod test_block;
 pub mod test_stop;
-//pub mod wall;
-//pub mod importer;
-//pub mod trigger;
-//pub mod gift;
-//pub mod tree;
+pub mod test_wall;
+pub mod test_importer;
+pub mod test_trigger;
+pub mod test_gift;
+//pub mod test_tree;
 

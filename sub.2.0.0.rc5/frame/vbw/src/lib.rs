@@ -1,6 +1,6 @@
 // This file is part of VBW.
 
-// Copyright (C) 2020 Fuu.
+// Copyright (C) 2020 Fuu<ff13dfly@163.com>.
 // SPDX-License-Identifier: Apache-2.0
 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,6 +26,7 @@ use sp_std::prelude::*;
 use frame_system::{self as system, ensure_signed};
 use codec::{Encode, Decode};
 
+mod vdecode;
 mod extensions;
 
 #[cfg(test)]
@@ -113,7 +114,7 @@ impl Default for Setting {
 }
 
 decl_storage! {
-	trait Store for Module<T: Trait> as Vblock {
+	trait Store for Module<T: Trait> as VBW {
 		
 		// autoincrement world id
         WorldCount get(fn world_count) config():u32=0;
@@ -166,7 +167,10 @@ decl_module! {
 
 		#[weight = 0]
 		fn updaet_source(origin,_id:u32,_data:Vec<u8>) -> DispatchResult {
-			let _sender = ensure_signed(origin)?;
+            let _sender = ensure_signed(origin)?;
+            
+            //extensions::block::BlockModule::hello_world(2,3);
+
 			Ok(())
 		}
 

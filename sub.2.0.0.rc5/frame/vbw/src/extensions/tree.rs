@@ -15,9 +15,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#[test]
-fn test_hello_world() {
-	let va: u32= 123;
-	let vb: u32= 123;
-	assert_eq!(va,vb);
+#[derive(Clone, Eq, PartialEq, Default)]
+pub struct TreeModule {
+	
+}
+
+impl TreeModule {
+    #[allow(dead_code)]
+    pub fn data_check(){
+		
+	}
 }
