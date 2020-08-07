@@ -18,7 +18,7 @@ interface Props {
 function App(prop:Props): React.ReactElement<Props> {
   return (
     <section>
-      3D Render
+      different icon and box faces
     </section>
   );
 }

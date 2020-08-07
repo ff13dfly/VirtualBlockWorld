@@ -8,6 +8,12 @@
 //import styled from 'styled-components';
 
 import React from 'react';
+import Render from './chordPreview';
+
+import Thumb from './thumb/ThumbBox';
+import Panel from './panel/PanelBox';
+import Plan from './plan/PlanBox';
+import Item from './item';
 
 interface Props {
   // type:number;
@@ -23,10 +29,30 @@ function App(prop:Props): React.ReactElement<Props> {
   //   const path=Uper.transPath(row.hash,row.format);
   //   prop.data[k].path=path+row.hash+'.'+row.format;
   // }
-  
+
+  const agent={}
+  const data={}
+
   return (
     <section>
-      box 3D controller
+      <table>
+        <tr>
+          <td><Render agent={agent} data={data}/></td>
+          <td>
+            <Thumb />
+            <Panel />
+            <Plan />
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td>
+            <Item />
+          </td>
+          <td></td>
+        </tr>
+      </table>
     </section>
   );
 }

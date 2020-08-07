@@ -9,11 +9,11 @@
 
 import React from 'react';
 
-import Plane from './plane';
-import Box from './box';
-import Roof from './roof';
+import Plane from './BasicPlane';
+import Box from './BasicBox';
+import Roof from './BasicRoof';
 
-import Render from './render';
+
 
 const CHORD_PLANE=1;
 const CHORD_BOX=2;
@@ -50,13 +50,14 @@ function App(prop:Props): React.ReactElement<Props> {
     default:
       break;
   }
+
+
   
   return (
     <section>
       <input type="text" value={prop.type}/>
       <input type="text" value={prop.memo}/>
       {control}
-      <Render />
     </section>
   );
 }
