@@ -20,7 +20,7 @@ function Chord (props:Props): React.ReactElement<Props> {
   //const [list, setData] = useState([]);     //列表页的数据及设置方法
   //const [info, setInfo] = useState('');     //出错信息
 
-  const type=1;
+  const type=2;
   const cage=[4,4,5];
   const memo='';
 

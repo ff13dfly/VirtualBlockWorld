@@ -9,20 +9,10 @@
 
 import React from 'react';
 
-import Plane from './plane';
-import Box from './box';
-import Roof from './roof';
-
-import Render from './render';
-
-const CHORD_PLANE=1;
-const CHORD_BOX=2;
-const CHORD_ROOF=3;
-
 interface Props {
-  type:number;
-  cage:Array<number>;
-  memo:string;
+  // type:number;
+  // cage:Array<number>;
+  // memo:string;
 }
 
 function App(prop:Props): React.ReactElement<Props> {
@@ -33,30 +23,10 @@ function App(prop:Props): React.ReactElement<Props> {
   //   const path=Uper.transPath(row.hash,row.format);
   //   prop.data[k].path=path+row.hash+'.'+row.format;
   // }
-  let control=(<Plane />);
-  switch (prop.type) {
-    case CHORD_PLANE:
-      control= (<Plane />);
-      break;
-
-    case CHORD_BOX:
-      control= (<Box />);
-       break;
-
-    case CHORD_ROOF:
-      control= (<Roof />);
-      break;
-
-    default:
-      break;
-  }
   
   return (
     <section>
-      <input type="text" value={prop.type}/>
-      <input type="text" value={prop.memo}/>
-      {control}
-      <Render />
+      plane 2D controller
     </section>
   );
 }
