@@ -1,3 +1,7 @@
+// Copyright 2020 Fuu<ff13dfly@163.com> authors & contributors
+// This software may be modified and distributed under the terms
+// of the Apache-2.0 license. See the LICENSE file for details.
+
 import {Md5} from 'ts-md5/dist/md5';
 import {ParallelHasher} from 'ts-md5/dist/parallel_hasher';
 import *  as Zip from 'jszip';

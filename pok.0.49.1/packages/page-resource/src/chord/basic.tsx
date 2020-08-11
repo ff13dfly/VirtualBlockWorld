@@ -1,4 +1,4 @@
-// Copyright 2017-2020 @polkadot/app-123code authors & contributors
+// Copyright 2020 Fuu<ff13dfly@163.com> authors & contributors
 // This software may be modified and distributed under the terms
 // of the Apache-2.0 license. See the LICENSE file for details.
 
@@ -26,13 +26,6 @@ interface Props {
 }
 
 function App(prop:Props): React.ReactElement<Props> {
-  //const Uper=prop.upper;
-  //计算出hash对应的路径
-  // for(let k in prop.data){
-  //   const row=prop.data[k];
-  //   const path=Uper.transPath(row.hash,row.format);
-  //   prop.data[k].path=path+row.hash+'.'+row.format;
-  // }
   let control=(<Plane />);
   switch (prop.type) {
     case CHORD_PLANE:

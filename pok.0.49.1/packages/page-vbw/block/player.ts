@@ -1,3 +1,7 @@
+// Copyright 2020 Fuu<ff13dfly@163.com> authors & contributors
+// This software may be modified and distributed under the terms
+// of the Apache-2.0 license. See the LICENSE file for details.
+
 //player的基本配置
 let pp:any={
     block:[101,203],		//默认的开始的土地块
