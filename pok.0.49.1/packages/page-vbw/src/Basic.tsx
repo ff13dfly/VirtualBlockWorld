@@ -28,7 +28,7 @@ function Basic (prop: Props): React.ReactElement<Props> {
             icon={item.icon}
             label={item.name}
             onClick={item.onClick}
-            size='small'
+            //size='small'
           />
         </li>
       ))}

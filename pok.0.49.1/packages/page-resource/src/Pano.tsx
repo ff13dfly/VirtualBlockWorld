@@ -195,7 +195,7 @@ function Sky (props:Props): React.ReactElement<Props> {
                   </td>
                   <td>
                     <Button
-                      icon='paper plane'
+                      //icon='paper plane'
                       label='上传全景天空'
                       onClick={self.uploadClick}
                       size='small'
@@ -209,14 +209,14 @@ function Sky (props:Props): React.ReactElement<Props> {
             </td>
             <td>
             <Button
-                icon='paper latest'
+                //icon='paper latest'
                 label='最新'
                 //onClick=
                 size='small'
                 tooltip='最新的上传的全景列表'
               />
             <Button
-                icon='paper loading'
+                //icon='paper loading'
                 label='更多'
                 //onClick=
                 size='small'

@@ -25,7 +25,7 @@ function Menu (prop: Props): React.ReactElement<Props> {
       {prop.list.map((item:any) => (
         <li key={item.name} style={{listStyle:'none',margin:'0 auto',float:'left'}}>
           <Button
-            icon={item.icon}
+            //icon={item.icon}
             label={item.name}
             onClick={item.onClick}
             //size = 'small'

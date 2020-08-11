@@ -60,7 +60,7 @@ const self:any={
     },
     //文件上传到服务器的操作
     toServer:(file:Blob,cfg:any,ck:any)=>{
-        console.log(file);
+        //console.log(file);
 
         const ikey='sky';
         const formData = new FormData();
@@ -75,8 +75,7 @@ const self:any={
             type:'post',async:true,processData:false,contentType:false,data:formData,timeout:6000,
             success:(rsp:string)=>{
                 const res=JSON.parse(rsp);
-
-                console.log(res);
+                //console.log(res);
 
                 ck && ck(res);
             },
@@ -93,7 +92,7 @@ const self:any={
 
     //获取文件的hash值的方法，用于文件保存
     getCheckHash:(file:File,ck:any)=>{
-        console.log('[basic/upload.ts => getCheckHash()]');
+        //console.log('[basic/upload.ts => getCheckHash()]');
         const reader= new FileReader();
         reader.readAsBinaryString(file);      //读成binarystring，zip就可以处理啦
         reader.onload=function(e){

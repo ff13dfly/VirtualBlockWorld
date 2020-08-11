@@ -13,7 +13,8 @@
     "dependencies": {
         "@babel/runtime": "^7.9.2",
         "@polkadot/react-components": "0.41.0-beta.27",
-        "three": "0.115.0",
-        "jquery": "3.5.0"
+        "@types/jquery": "^3.5.1",
+        "jquery": "3.5.0",
+        "three": "0.115.0"
     }
 }

@@ -25,7 +25,7 @@ function Panel (props: Props): React.ReactElement<Props> {
         <tr>
           <td> 
             <Button
-              icon='paper'
+              //icon='paper'
               label='up'
               onClick={props.up}
               size='small'
@@ -35,7 +35,7 @@ function Panel (props: Props): React.ReactElement<Props> {
         <tr>
           <td> 
             <Button
-              icon='paper'
+              //icon='paper'
               label='left'
               onClick={props.left}
               size='small'
@@ -43,7 +43,7 @@ function Panel (props: Props): React.ReactElement<Props> {
           </td>
           <td> 
             <Button
-              icon='paper'
+              //icon='paper'
               label='right'
               onClick={props.right}
               size='small'
@@ -53,7 +53,7 @@ function Panel (props: Props): React.ReactElement<Props> {
         <tr>
           <td> 
             <Button
-              icon='paper'
+              //icon='paper'
               label='down'
               onClick={props.down}
               size='small'
@@ -63,7 +63,7 @@ function Panel (props: Props): React.ReactElement<Props> {
         <tr>
           <td> 
             <Button
-              icon='paper'
+              //icon='paper'
               label='face'
               onClick={props.face}
               size='small'

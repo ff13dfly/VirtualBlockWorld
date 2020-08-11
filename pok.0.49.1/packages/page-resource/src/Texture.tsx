@@ -221,7 +221,7 @@ function Space (): React.ReactElement<Props> {
                   </td>
                   <td>
                     <Button
-                      icon='paper plane'
+                      //icon='paper plane'
                       label='上传材质'
                       onClick={self.uploadClick}
                       size='small'
@@ -235,7 +235,7 @@ function Space (): React.ReactElement<Props> {
             </td>
             <td>
             <Button
-              icon='paper latest'
+              //icon='paper latest'
               label='最新'
               onClick={self.nowPage}
               size='small'
@@ -243,7 +243,7 @@ function Space (): React.ReactElement<Props> {
               tooltip='最新的上传的模型列表'
             />
             <Button
-                icon='paper loading'
+                //icon='paper loading'
                 label='更多'
                 size='small'
                 style={fmap}

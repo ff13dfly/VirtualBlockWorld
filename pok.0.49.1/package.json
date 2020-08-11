@@ -124,6 +124,7 @@
     "webpack-plugin-serve": "^1.0.1"
   },
   "dependencies": {
+    "@types/jquery": "^3.5.1",
     "dat.gui": "^0.7.7",
     "jQuery": "^1.7.4",
     "jszip": "^3.5.0",
