@@ -19,7 +19,14 @@ interface Props {
 function App(prop:Props): React.ReactElement<Props> {  
   return (
     <section>
-      Item list of plan
+      <table>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <h4>wall</h4>
+      <h4>stop</h4>
     </section>
   );
 }

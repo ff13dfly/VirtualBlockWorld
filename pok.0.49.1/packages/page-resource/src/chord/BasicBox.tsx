@@ -37,7 +37,17 @@ function App(prop:Props): React.ReactElement<Props> {
     <section>
       <table>
         <tr>
-          <td><Render agent={agent} data={data}/></td>
+          <td>
+            <Render agent={agent} data={data}/>
+            <table>
+              <tr>
+                <td>
+                  <Item />
+                </td>
+                <td></td>
+              </tr>
+            </table>
+          </td>
           <td>
             <Thumb />
             <Panel />
@@ -45,14 +55,7 @@ function App(prop:Props): React.ReactElement<Props> {
           </td>
         </tr>
       </table>
-      <table>
-        <tr>
-          <td>
-            <Item />
-          </td>
-          <td></td>
-        </tr>
-      </table>
+      
     </section>
   );
 }

@@ -27,7 +27,7 @@ function Selection (): React.ReactElement {
     (error?: Error | null) => setError(error ? error.message : null),
     []
   );
-
+  
   return (
     <div className='extrinsics--Selection'>
       <InputAddress

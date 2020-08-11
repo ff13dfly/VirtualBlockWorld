@@ -8,7 +8,7 @@
 //import styled from 'styled-components';
 
 import React from 'react';
-
+import { Button} from '@polkadot/react-components';
 interface Props {
   // type:number;
   // cage:Array<number>;
@@ -18,9 +18,83 @@ interface Props {
 function App(prop:Props): React.ReactElement<Props> {
   return (
     <section>
-      <h3>Close</h3>
-
-      <h3>Pass</h3>
+      <table>
+        <tr>
+          <td>
+            <h4>Close</h4>
+            <table>
+              <tr>
+                <td>
+                <Button
+                  label='Plan 0'
+                  onClick={self.show}
+                  tooltip='左侧面数据'
+                />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <Button
+                  label='Plan 1'
+                  onClick={self.show}
+                  tooltip='左侧面数据'
+                />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <h4>Pass</h4>
+            <table>
+              <tr>
+                <td>
+                <Button
+                  label='Plan 0'
+                  onClick={self.show}
+                  tooltip='左侧面数据'
+                />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <Button
+                  label='Plan 1'
+                  onClick={self.show}
+                  tooltip='左侧面数据'
+                />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <Button
+                  label='Plan 2'
+                  onClick={self.show}
+                  tooltip='左侧面数据'
+                />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td>
+            <Button
+            label='- Remove'
+            onClick={self.show}
+            tooltip='左侧面数据'
+          />
+          </td>
+          <td>
+            <Button
+            label='+ Add'
+            onClick={self.show}
+            tooltip='左侧面数据'
+          />
+          </td>
+        </tr>
+      </table>
     </section>
   );
 }

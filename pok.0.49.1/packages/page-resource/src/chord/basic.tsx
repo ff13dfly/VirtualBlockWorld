@@ -7,6 +7,7 @@
 //import React, { useState } from 'react';
 //import styled from 'styled-components';
 
+import { Input,/*Dropdown*/ } from '@polkadot/react-components';
 import React from 'react';
 
 import Plane from './BasicPlane';
@@ -19,6 +20,17 @@ const CHORD_PLANE=1;
 const CHORD_BOX=2;
 const CHORD_ROOF=3;
 
+let types=[
+  
+]
+
+const self={
+  blur:(e:any)=>{
+    //console.log(e);
+    console.log('basic input blur');
+  }
+}
+
 interface Props {
   type:number;
   cage:Array<number>;
@@ -26,30 +38,64 @@ interface Props {
 }
 
 function App(prop:Props): React.ReactElement<Props> {
+  console.log(prop);
   let control=(<Plane />);
+  let type=CHORD_PLANE;
   switch (prop.type) {
     case CHORD_PLANE:
       control= (<Plane />);
+      type=CHORD_PLANE;
       break;
 
     case CHORD_BOX:
       control= (<Box />);
+      type=CHORD_BOX;
        break;
 
     case CHORD_ROOF:
       control= (<Roof />);
+      type=CHORD_ROOF;
       break;
 
     default:
       break;
   }
 
-
-  
+  const tmap={width:'100%'};
+  //<Dropdown
+  //defaultValue={types}
+  //label='type of chord'
+  //onChange={self.blur}
+  ///>
   return (
     <section>
-      <input type="text" value={prop.type}/>
-      <input type="text" value={prop.memo}/>
+      <h4>chord basic param</h4>
+      <table style={tmap}>
+        <tr>
+          <td>
+            <Input
+              label={'type of chord'}
+              onChange={self.blur}
+              value={prop.type}
+            />
+          </td>
+          <td>
+            <Input
+              label={'memo'}
+              onChange={self.blur}
+              value={prop.memo}
+            />
+          </td>
+          <td>
+            <Input
+              label={'size of chord'}
+              onChange={self.blur}
+              value={prop.cage}
+            />
+          </td>
+        </tr>
+      </table>
+      
       {control}
     </section>
   );

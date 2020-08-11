@@ -8,6 +8,11 @@
 //import styled from 'styled-components';
 
 import React from 'react';
+import { Button} from '@polkadot/react-components';
+
+const me={
+  show:()=>{},
+}
 
 interface Props {
   // type:number;
@@ -15,11 +20,66 @@ interface Props {
   // memo:string;
 }
 
+
 function App(prop:Props): React.ReactElement<Props> {
+
+  const container='thumb_cvs_dom';
+  
+  const cmap={width: '200px',height:'200px',background:'#BBBBBB'};
+  const tmap={width: '100%'};
+  
   return (
     <section>
-      [preview]
-      [left,front,right,back,top,bottom]
+      <div  id={container} style={cmap}></div>
+      <table style={tmap} >
+        <tr>
+          <td>
+            <Button
+                label='L'
+                onClick={self.show}
+                tooltip='左侧面数据'
+            />
+          </td>
+          <td>
+            <Button
+                label='F'
+                onClick={self.show}
+                tooltip='右侧面数据'
+            />
+          </td>
+          <td>
+            <Button
+                label='T'
+                onClick={self.show}
+                tooltip='右侧面数据'
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <Button
+                label='R'
+                onClick={self.show}
+                tooltip='底侧面数据'
+            />
+          </td>
+          <td>
+            <Button
+                label='B'
+                onClick={self.show}
+                tooltip='底侧面数据'
+            />
+          </td>
+          <td>
+            <Button
+                label='M'
+                onClick={self.show}
+                tooltip='底侧面数据'
+            />
+          </td>
+        </tr>
+      </table>
+      <hr/>
     </section>
   );
 }

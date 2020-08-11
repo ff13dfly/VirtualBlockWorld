@@ -8,7 +8,11 @@
 //import styled from 'styled-components';
 
 import React from 'react';
+import { Button} from '@polkadot/react-components';
 
+const self={
+  show:()=>{},
+}
 interface Props {
   // type:number;
   // cage:Array<number>;
@@ -18,13 +22,66 @@ interface Props {
 function App(prop:Props): React.ReactElement<Props> {
   return (
     <section>
-      <button>preview</button>
-      <button>left</button>
-      <button>right</button>
-      <button>front</button>
-      <button>back</button>
-      <button>top</button>
-      <button>button</button>
+      <table>
+        <tr>
+          <td>
+            <Button
+                label='Preview'
+                onClick={self.show}
+                tooltip='预览整个弦粒子'
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <Button
+                label='Left'
+                onClick={self.show}
+                tooltip='左侧面数据'
+            />
+          </td>
+          <td>
+            <Button
+                label='Right'
+                onClick={self.show}
+                tooltip='右侧面数据'
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <Button
+                label='Front'
+                onClick={self.show}
+                tooltip='前侧面数据'
+            />
+          </td>
+          <td>
+            <Button
+                label='Back'
+                onClick={self.show}
+                tooltip='后侧面数据'
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <Button
+                label='Top'
+                onClick={self.show}
+                tooltip='顶侧面数据'
+            />
+          </td>
+          <td>
+            <Button
+                label='Bottom'
+                onClick={self.show}
+                tooltip='底侧面数据'
+            />
+          </td>
+        </tr>
+      </table>
+      <hr/>
     </section>
   );
 }

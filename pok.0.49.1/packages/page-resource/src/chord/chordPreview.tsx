@@ -18,9 +18,12 @@ interface Props {
 }
 
 function App(prop:Props): React.ReactElement<Props> {
+  const container='three_cvs_dom';
+
+  const cmap={ width: '900px',height:'600px',background:'#BBBBBB',marginTop:'20px'};
   return (
     <section>
-      3D Render
+      <div id={container} style={cmap}>3D Render Canvas Container</div>
     </section>
   );
 }
