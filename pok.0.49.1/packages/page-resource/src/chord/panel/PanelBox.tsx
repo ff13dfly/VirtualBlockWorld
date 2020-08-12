@@ -23,6 +23,7 @@ function App(prop:Props): React.ReactElement<Props> {
   return (
     <section>
       <table>
+        <tbody>
         <tr>
           <td>
             <Button
@@ -80,6 +81,7 @@ function App(prop:Props): React.ReactElement<Props> {
             />
           </td>
         </tr>
+        </tbody>
       </table>
       <hr/>
     </section>

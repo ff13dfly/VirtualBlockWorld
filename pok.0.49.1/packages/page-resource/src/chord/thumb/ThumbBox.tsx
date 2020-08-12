@@ -10,7 +10,7 @@
 import React from 'react';
 import { Button} from '@polkadot/react-components';
 
-const me={
+const self={
   show:()=>{},
 }
 
@@ -32,6 +32,7 @@ function App(prop:Props): React.ReactElement<Props> {
     <section>
       <div  id={container} style={cmap}></div>
       <table style={tmap} >
+        <tbody>
         <tr>
           <td>
             <Button
@@ -78,6 +79,7 @@ function App(prop:Props): React.ReactElement<Props> {
             />
           </td>
         </tr>
+        </tbody>
       </table>
       <hr/>
     </section>

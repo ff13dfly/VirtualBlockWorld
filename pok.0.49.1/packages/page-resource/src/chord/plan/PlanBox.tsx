@@ -9,6 +9,11 @@
 
 import React from 'react';
 import { Button} from '@polkadot/react-components';
+
+const self={
+  show:()=>{},
+}
+
 interface Props {
   // type:number;
   // cage:Array<number>;
@@ -19,10 +24,12 @@ function App(prop:Props): React.ReactElement<Props> {
   return (
     <section>
       <table>
+        <tbody>
         <tr>
           <td>
             <h4>Close</h4>
             <table>
+              <tbody>
               <tr>
                 <td>
                 <Button
@@ -41,11 +48,13 @@ function App(prop:Props): React.ReactElement<Props> {
                 />
                 </td>
               </tr>
+              </tbody>
             </table>
           </td>
           <td>
             <h4>Pass</h4>
             <table>
+              <tbody>
               <tr>
                 <td>
                 <Button
@@ -73,11 +82,14 @@ function App(prop:Props): React.ReactElement<Props> {
                 />
                 </td>
               </tr>
+              </tbody>
             </table>
           </td>
         </tr>
+        </tbody>
       </table>
       <table>
+        <tbody>
         <tr>
           <td>
             <Button
@@ -94,6 +106,7 @@ function App(prop:Props): React.ReactElement<Props> {
           />
           </td>
         </tr>
+        </tbody>
       </table>
     </section>
   );

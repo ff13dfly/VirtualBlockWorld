@@ -36,6 +36,7 @@ function App(prop:Props): React.ReactElement<Props> {
   return (
     <section>
       <table>
+        <tbody>
         <tr>
           <td>
             <Render agent={agent} data={data}/>
@@ -54,6 +55,7 @@ function App(prop:Props): React.ReactElement<Props> {
             <Plan />
           </td>
         </tr>
+        </tbody>
       </table>
       
     </section>

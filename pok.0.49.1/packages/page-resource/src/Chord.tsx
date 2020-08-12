@@ -15,25 +15,24 @@ interface Props {
 }
 
 function Chord (props:Props): React.ReactElement<Props> {
-
-  //const {api} = useApi();
-  //const [list, setData] = useState([]);     //列表页的数据及设置方法
-  //const [info, setInfo] = useState('');     //出错信息
-
   const type=2;
   const cage=[4,4,5];
   const memo='';
+  const raw={stop:[],pass:[],cornor:[]};
+
+  //const [type, setType] = useState(true);
 
   React.useEffect(() => {
+    
   }, []);
 
-  //const tmap={width:'100%'},smap={'marginTop':'5px','marginBottom':'15px','fontSize':'16px'}
   return (
     <section>
       <Basic 
         type={type}
         cage={cage}
         memo={memo}
+        raw={raw}
       />
     </section>
   );
