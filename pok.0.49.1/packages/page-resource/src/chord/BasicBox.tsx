@@ -41,12 +41,14 @@ function App(prop:Props): React.ReactElement<Props> {
           <td>
             <Render agent={agent} data={data}/>
             <table>
+              <tbody>
               <tr>
                 <td>
                   <Item />
                 </td>
-                <td></td>
+                <td>item details</td>
               </tr>
+              </tbody>
             </table>
           </td>
           <td>
@@ -57,7 +59,6 @@ function App(prop:Props): React.ReactElement<Props> {
         </tr>
         </tbody>
       </table>
-      
     </section>
   );
 }

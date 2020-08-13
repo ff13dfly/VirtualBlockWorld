@@ -7,8 +7,8 @@
 //import React, { useState } from 'react';
 //import styled from 'styled-components';
 
-import { Input,Button/*Dropdown*/ } from '@polkadot/react-components';
-import React, { useEffect, useState }from 'react';
+import { Input,Button} from '@polkadot/react-components';
+import React, {useState }from 'react';
 
 import Plane from './BasicPlane';
 import Box from './BasicBox';
@@ -27,7 +27,7 @@ interface Props {
 }
 
 function App(prop:Props): React.ReactElement<Props> {
-  console.log(prop);
+  //console.log(prop);
   const self={
     blur:()=>{
       console.log('basic input blur');
@@ -62,9 +62,9 @@ function App(prop:Props): React.ReactElement<Props> {
   }
 
   React.useEffect(() => {
-    
+    console.log(prop);
   }, []);
-  
+
   const tmap={width:'100%'};
   return (
     <section>
@@ -78,16 +78,14 @@ function App(prop:Props): React.ReactElement<Props> {
               className='medium'
               help=''
               isDisabled = {isRunning}
-              //isError={!isMatchValid}
               label='type of chord'
-              //onChange={_onChangeMatch}
-              //onEnter={_toggleStart}
               value={prop.type}
             />
           </td>
           <td>
             <Input
               label={'memo'}
+              type='text'
               onBlur={self.blur}
               value={prop.memo}
             />
@@ -109,7 +107,6 @@ function App(prop:Props): React.ReactElement<Props> {
         </tr>
         </tbody>
       </table>
-      
       {control}
     </section>
   );
