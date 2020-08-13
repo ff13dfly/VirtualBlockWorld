@@ -28,6 +28,7 @@ options needed "--ws-external" ,details [https://stackoverflow.com/questions/577
 `cargo run --bin substrate  --  --dev  -d ~/Desktop/www/vbw/db --offchain-worker --execution=NativeElseWasm`
 
 
+
 # polkadot how to add page
 
 get the release verion of polkadot (https://github.com/polkadot-js/apps/releases/)
@@ -47,6 +48,8 @@ import vbw from './vbw';`
 5.add pages to the side-menu
 
 6.install packages needed as follow : dat.gui,jszip,lrz,react-cropper
+
+npm install --save jquery
 npm install --save dat.gui
 npm install --save jszip
 npm install --save lrz
@@ -54,6 +57,12 @@ npm install --save react-cropper
 
 /usr/bin/node /data/default/node_modules/.bin/webpack --config /data/default/packages/apps/webpack.config.js
 
-
-
 http://61.147.107.5/packages/apps/dist/source/save.php
+
+
+
+# Substrate compile problems
+
+* failed to select a version for the requirement `wabt = "^0.9.2"`. Modify the version to `"0.9.1"`
+* 
+
