@@ -89,5 +89,5 @@ raw:0x7b2273746f70223a5b5b5b5b302e332c332c345d2c5b352e31352c31332c325d2c5b302c30
 组件是构成虚块世界的重要组成部分，保障可以构建丰富多彩的虚拟世界，以下这些可以构建基本的3D环境。
 
 * 基础组件：[block](block.md)，[stop](stop.md)，[trigger](trigger.md)，[gift](gift.md)
-* 扩展组件：[wall](wall.md)，[importer](importer.md)，[tree](tree.md)
+* 扩展组件：[wall](wall.md)，[importer](importer.md)，[tree](tree.md)，[chord](chord.md)
 
