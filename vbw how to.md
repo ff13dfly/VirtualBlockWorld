@@ -24,6 +24,8 @@ add  in 'construct_runtime' expression
 
 options needed "--ws-external" ,details [https://stackoverflow.com/questions/57753969/kusama-provided-host-header-is-not-whitelisted?r=SearchResults]
 
+5.run the folllow command to run substrate node:
+`cargo run --bin substrate  --  --dev  -d ~/Desktop/www/vbw/db --offchain-worker --execution=NativeElseWasm`
 
 
 # polkadot how to add page
