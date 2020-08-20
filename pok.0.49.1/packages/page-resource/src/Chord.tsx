@@ -8,6 +8,8 @@ import React from 'react';
 
 import Basic from './chord/basic';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button,Form} from 'react-bootstrap';
 
 //import {useApi} from '@polkadot/react-hooks';
 interface Props {
@@ -28,12 +30,21 @@ function Chord (props:Props): React.ReactElement<Props> {
 
   return (
     <section>
+      <Form.Group>
+      <Form.Control size="lg" type="text" placeholder="Large text" />
+      <br />
+      <Form.Control type="text" placeholder="Normal text" />
+      <br />
+      <Form.Control size="sm" type="text" placeholder="Small text" />
+    </Form.Group>
+      <Button variant="primary">Primary</Button>{' '}
       <Basic 
         type={type}
         cage={cage}
         memo={memo}
         raw={raw}
       />
+      
     </section>
   );
 }
