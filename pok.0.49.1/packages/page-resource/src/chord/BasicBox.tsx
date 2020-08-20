@@ -9,6 +9,7 @@
 
 import React from 'react';
 import Render from './chordPreview';
+import {Container,Row,Col} from 'react-bootstrap';
 
 import Thumb from './thumb/ThumbBox';
 import Panel from './panel/PanelBox';
@@ -35,30 +36,19 @@ function App(prop:Props): React.ReactElement<Props> {
 
   return (
     <section>
-      <table>
-        <tbody>
-        <tr>
-          <td>
+      <Container>
+        <Row>
+          <Col lg={9}>
             <Render agent={agent} data={data}/>
-            <table>
-              <tbody>
-              <tr>
-                <td>
-                  <Item />
-                </td>
-                <td>item details</td>
-              </tr>
-              </tbody>
-            </table>
-          </td>
-          <td>
+            <Item />
+          </Col>
+          <Col lg={3}>
             <Thumb />
             <Panel />
             <Plan />
-          </td>
-        </tr>
-        </tbody>
-      </table>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 }

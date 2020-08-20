@@ -7,8 +7,11 @@
 //import React, { useState } from 'react';
 //import styled from 'styled-components';
 
-import { Input,Button} from '@polkadot/react-components';
+//import { Input} from '@polkadot/react-components';
 import React, {useState }from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button,Form,Container,Row,Col} from 'react-bootstrap';
 
 import Plane from './BasicPlane';
 import Box from './BasicBox';
@@ -65,48 +68,48 @@ function App(prop:Props): React.ReactElement<Props> {
     console.log(prop);
   }, []);
 
-  const tmap={width:'100%'};
   return (
     <section>
-      <h4>chord basic param</h4>
-      <table style={tmap}>
-        <tbody>
-        <tr>
-          <td>
-            <Input
-              autoFocus
-              className='medium'
-              help=''
-              isDisabled = {isRunning}
-              label='type of chord'
-              value={prop.type}
-            />
-          </td>
-          <td>
-            <Input
-              label={'memo'}
-              type='text'
-              onBlur={self.blur}
-              value={prop.memo}
-            />
-          </td>
-          <td>
-            <Input
-              label={'size of chord'}
-              onBlur={self.blur}
-              value={JSON.stringify(prop.cage)}
-            />
-          </td>
-          <td>
-            <Button
-              label='save chord'
-              onClick={self.save}
-              tooltip='底侧面数据'
-            />
-          </td>
-        </tr>
-        </tbody>
-      </table>
+      <Container>
+        <Row>
+          <Col lg={2}>
+            <Form.Group controlId="exampleForm.ControlSelect1">
+              <Form.Label>弦粒子类型</Form.Label>
+              <Form.Control as="select">
+                <option value="1">平面型</option>
+                <option value="2">盒子型</option>
+                <option value="3">屋顶型</option>
+              </Form.Control>
+            </Form.Group>
+          </Col>
+          <Col lg={3}>
+            <Form.Group>
+              <Form.Label>尺寸</Form.Label>
+              <Form.Control type="text" placeholder="Normal text" value={prop.cage}/>
+            </Form.Group>
+          </Col>
+          <Col lg={3}>
+            <Form.Group>
+              <Form.Label>说明</Form.Label>
+              <Form.Control type="text" placeholder="Normal text" value={prop.memo}/>
+            </Form.Group>
+          </Col>
+          <Col lg={3}>
+            <Form.Group>
+              <Form.Label>说明</Form.Label>
+              <Form.Control type="text" placeholder="Normal text" value={prop.raw}/>
+            </Form.Group>
+          </Col>
+          <Col lg={1}>
+          <Form.Group>
+            <Form.Label>保存弦粒子</Form.Label>
+            <Button variant="primary"
+            onClick={self.show}
+            >Save</Button>{' '}
+          </Form.Group>
+          </Col>
+        </Row>
+      </Container>
       {control}
     </section>
   );

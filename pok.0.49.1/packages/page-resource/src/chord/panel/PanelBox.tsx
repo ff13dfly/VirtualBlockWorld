@@ -8,7 +8,8 @@
 //import styled from 'styled-components';
 
 import React from 'react';
-import { Button} from '@polkadot/react-components';
+//import { Button} from '@polkadot/react-components';
+import {Form,Button,Row,Col} from 'react-bootstrap';
 
 const self={
   show:()=>{},
@@ -22,67 +23,77 @@ interface Props {
 function App(prop:Props): React.ReactElement<Props> {
   return (
     <section>
-      <table>
-        <tbody>
-        <tr>
-          <td>
-            <Button
-                label='Preview'
-                onClick={self.show}
-                tooltip='预览整个弦粒子'
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Button
-                label='Left'
-                onClick={self.show}
-                tooltip='左侧面数据'
-            />
-          </td>
-          <td>
-            <Button
-                label='Right'
-                onClick={self.show}
-                tooltip='右侧面数据'
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Button
-                label='Front'
-                onClick={self.show}
-                tooltip='前侧面数据'
-            />
-          </td>
-          <td>
-            <Button
-                label='Back'
-                onClick={self.show}
-                tooltip='后侧面数据'
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Button
-                label='Top'
-                onClick={self.show}
-                tooltip='顶侧面数据'
-            />
-          </td>
-          <td>
-            <Button
-                label='Bottom'
-                onClick={self.show}
-                tooltip='底侧面数据'
-            />
-          </td>
-        </tr>
-        </tbody>
-      </table>
+      <Row>
+        <Col>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Preview</Button>{' '}
+          </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+          <Col lg={6} sm={6}>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Left</Button>{' '}
+            </Form.Group>
+          </Col>
+          <Col lg={6} sm={6}>
+            <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Right</Button>{' '}
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={6} sm={6}>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Left</Button>{' '}
+            </Form.Group>
+          </Col>
+          <Col lg={6} sm={6}>
+            <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Right</Button>{' '}
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={6} sm={6}>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Left</Button>{' '}
+            </Form.Group>
+          </Col>
+          <Col lg={6} sm={6}>
+            <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Right</Button>{' '}
+            </Form.Group>
+          </Col>
+        </Row>
       <hr/>
     </section>
   );

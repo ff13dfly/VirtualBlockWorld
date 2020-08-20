@@ -8,7 +8,8 @@
 //import styled from 'styled-components';
 
 import React from 'react';
-import { Button} from '@polkadot/react-components';
+//import { Button} from '@polkadot/react-components';
+import {Form,Button,Row,Col} from 'react-bootstrap';
 
 const self={
   show:()=>{},
@@ -25,62 +26,75 @@ function App(prop:Props): React.ReactElement<Props> {
 
   const container='thumb_cvs_dom';
   
-  const cmap={width: '200px',height:'200px',background:'#BBBBBB'};
-  const tmap={width: '100%'};
+  const cmap={width: '100%',height:'200px',background:'#BBBBBB'};
   
   return (
     <section>
-      <div  id={container} style={cmap}></div>
-      <table style={tmap} >
-        <tbody>
-        <tr>
-          <td>
-            <Button
-                label='L'
-                onClick={self.show}
-                tooltip='左侧面数据'
-            />
-          </td>
-          <td>
-            <Button
-                label='F'
-                onClick={self.show}
-                tooltip='右侧面数据'
-            />
-          </td>
-          <td>
-            <Button
-                label='T'
-                onClick={self.show}
-                tooltip='右侧面数据'
-            />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Button
-                label='R'
-                onClick={self.show}
-                tooltip='底侧面数据'
-            />
-          </td>
-          <td>
-            <Button
-                label='B'
-                onClick={self.show}
-                tooltip='底侧面数据'
-            />
-          </td>
-          <td>
-            <Button
-                label='M'
-                onClick={self.show}
-                tooltip='底侧面数据'
-            />
-          </td>
-        </tr>
-        </tbody>
-      </table>
+        <Row>
+          <Col>
+          <Form.Group>
+            <div  id={container} style={cmap}></div>
+          </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={4} sm={4}>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Left</Button>{' '}
+            </Form.Group>
+          </Col>
+          <Col lg={4} sm={4}>
+            <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Front</Button>{' '}
+            </Form.Group>
+          </Col>
+          <Col lg={4} sm={4}>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Top</Button>{' '}
+            </Form.Group>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={4} sm={4}>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Right</Button>{' '}
+            </Form.Group>
+          </Col>
+          <Col lg={4} sm={4}>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Back</Button>{' '}
+            </Form.Group>
+          </Col>
+          <Col lg={4} sm={4}>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              size="sm"
+              onClick={self.show}
+            >Bottom</Button>{' '}
+            </Form.Group>
+          </Col>
+        </Row>
       <hr/>
     </section>
   );
