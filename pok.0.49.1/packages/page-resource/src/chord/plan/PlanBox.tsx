@@ -8,10 +8,13 @@
 //import styled from 'styled-components';
 
 import React from 'react';
-import { Button} from '@polkadot/react-components';
+//import { Button} from '@polkadot/react-components';
+import {Form,Button,Row,Col,ListGroup,ButtonGroup} from 'react-bootstrap';
 
 const self={
-  show:()=>{},
+  show:()=>{
+    console.log('hello button');
+  },
 }
 
 interface Props {
@@ -23,91 +26,58 @@ interface Props {
 function App(prop:Props): React.ReactElement<Props> {
   return (
     <section>
-      <table>
-        <tbody>
-        <tr>
-          <td>
-            <h4>Close</h4>
-            <table>
-              <tbody>
-              <tr>
-                <td>
-                <Button
-                  label='Plan 0'
-                  onClick={self.show}
-                  tooltip='左侧面数据'
-                />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                <Button
-                  label='Plan 1'
-                  onClick={self.show}
-                  tooltip='左侧面数据'
-                />
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </td>
-          <td>
-            <h4>Pass</h4>
-            <table>
-              <tbody>
-              <tr>
-                <td>
-                <Button
-                  label='Plan 0'
-                  onClick={self.show}
-                  tooltip='左侧面数据'
-                />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                <Button
-                  label='Plan 1'
-                  onClick={self.show}
-                  tooltip='左侧面数据'
-                />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                <Button
-                  label='Plan 2'
-                  onClick={self.show}
-                  tooltip='左侧面数据'
-                />
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-      <table>
-        <tbody>
-        <tr>
-          <td>
-            <Button
-            label='- Remove'
-            onClick={self.show}
-            tooltip='左侧面数据'
-          />
-          </td>
-          <td>
-            <Button
-            label='+ Add'
-            onClick={self.show}
-            tooltip='左侧面数据'
-          />
-          </td>
-        </tr>
-        </tbody>
-      </table>
+      <Row>
+        <Col lg={6} sm={6}>
+          <Form.Group>
+            <Button 
+              variant="light"
+              onClick={self.show}
+            >Stop</Button>{' '}
+          </Form.Group>
+        </Col>
+        <Col lg={6} sm={6}>
+          <Form.Group>
+            <Button 
+              variant="light"
+              onClick={self.show}
+            >Pass</Button>{' '}
+          </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={6} sm={6}>
+        <ListGroup as="ul">
+          <ListGroup.Item as="li" active>Plan 0</ListGroup.Item>
+          <ListGroup.Item as="li">Plan 1</ListGroup.Item>
+          <ListGroup.Item as="li">Plan 2</ListGroup.Item>
+        </ListGroup>
+        <ButtonGroup className="xs-6">
+          <Button size="sm"> + </Button>
+          <Button size="sm"> - </Button>
+        </ButtonGroup>
+        </Col>
+        <Col lg={6} sm={6}>
+        <ListGroup as="ul">
+          <ListGroup.Item as="li">Plan 0</ListGroup.Item>
+          <ListGroup.Item as="li">Plan 1</ListGroup.Item>
+          <ListGroup.Item as="li">Plan 2</ListGroup.Item>
+        </ListGroup>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Form.Group>
+            <Button 
+              variant="primary"
+              onClick={self.show}
+            >+ Add </Button>{' '}
+            <Button 
+              variant="primary"
+              onClick={self.show}
+            >- Remove </Button>{' '}
+          </Form.Group>
+        </Col>
+      </Row>
     </section>
   );
 }

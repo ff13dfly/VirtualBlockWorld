@@ -9,7 +9,7 @@
 
 import React from 'react';
 //import { Button} from '@polkadot/react-components';
-import {Form,Button,Row,Col} from 'react-bootstrap';
+import {Form,Button,Row,Col,ButtonGroup} from 'react-bootstrap';
 
 const self={
   show:()=>{},
@@ -38,61 +38,15 @@ function App(prop:Props): React.ReactElement<Props> {
           </Col>
         </Row>
         <Row>
-          <Col lg={4} sm={4}>
-          <Form.Group>
-            <Button 
-              variant="primary"
-              size="sm"
-              onClick={self.show}
-            >Left</Button>{' '}
-            </Form.Group>
-          </Col>
-          <Col lg={4} sm={4}>
-            <Form.Group>
-            <Button 
-              variant="primary"
-              size="sm"
-              onClick={self.show}
-            >Front</Button>{' '}
-            </Form.Group>
-          </Col>
-          <Col lg={4} sm={4}>
-          <Form.Group>
-            <Button 
-              variant="primary"
-              size="sm"
-              onClick={self.show}
-            >Top</Button>{' '}
-            </Form.Group>
-          </Col>
-        </Row>
-        <Row>
-          <Col lg={4} sm={4}>
-          <Form.Group>
-            <Button 
-              variant="primary"
-              size="sm"
-              onClick={self.show}
-            >Right</Button>{' '}
-            </Form.Group>
-          </Col>
-          <Col lg={4} sm={4}>
-          <Form.Group>
-            <Button 
-              variant="primary"
-              size="sm"
-              onClick={self.show}
-            >Back</Button>{' '}
-            </Form.Group>
-          </Col>
-          <Col lg={4} sm={4}>
-          <Form.Group>
-            <Button 
-              variant="primary"
-              size="sm"
-              onClick={self.show}
-            >Bottom</Button>{' '}
-            </Form.Group>
+          <Col>
+          <ButtonGroup className="xs-2">
+            <Button size="sm">Left</Button>
+            <Button size="sm">Front</Button>
+            <Button size="sm">Top</Button>
+            <Button size="sm">Right</Button>
+            <Button size="sm">Back</Button>
+            <Button size="sm">Bottom</Button>
+          </ButtonGroup>
           </Col>
         </Row>
       <hr/>
