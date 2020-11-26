@@ -8,12 +8,8 @@ Details:	[English edition](bluemap/EN.md) 	[Chinese edition](bluemap/CN.md)
 
 
 # Now
-
-* Editing blue map
-* Applying for grants program of W3F
-* Preparing to code module trigger and module gift
-* Preparing to code module tree
-* Coding resource Chord
+* Fix the demo bugs
+* Building the player ground
 
 
 ## Demos
