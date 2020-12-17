@@ -9,7 +9,7 @@ import React from 'react';
 import Basic from './chord/basic';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button,Form} from 'react-bootstrap';
+//import { Button,Form} from 'react-bootstrap';
 
 //import {useApi} from '@polkadot/react-hooks';
 interface Props {
