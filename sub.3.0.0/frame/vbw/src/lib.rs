@@ -23,7 +23,8 @@ use frame_support::{
 	dispatch::{DispatchResult}, decl_module, decl_storage, decl_event,ensure
 };
 use sp_std::prelude::*;
-use frame_system::{self as system, ensure_signed};
+//use frame_system::{self as system, ensure_signed};
+use frame_system::{self as system,ensure_signed};
 use codec::{Encode, Decode};
 
 mod vdecode;
@@ -36,10 +37,10 @@ mod tests;
 //type BalanceOf<T> = <T as pallet_balances::Trait>::Balance;
 
 /// `frame_system::Trait` should always be included in our implied traits.
-pub trait Trait: pallet_balances::Trait {
+pub trait Trait: pallet_balances::Config {
 
 	/// The overarching event type.
-	type Event: From<Event<Self>> + Into<<Self as frame_system::Trait>::Event>;
+	type Event: From<Event<Self>> + Into<<Self as frame_system::Config>::Event>;
 }
 
 //basic setting
@@ -144,7 +145,9 @@ decl_event!(
 	/// Events are a simple means of reporting specific conditions and
 	/// circumstances that have happened that users, Dapps and/or chain explorers would find
 	/// interesting and otherwise difficult to detect.
-	pub enum Event<T> where B = <T as pallet_balances::Trait>::Balance,AccountId = <T as system::Trait>::AccountId {
+    ///pub enum Event<T> where B = <T as pallet_balances::Config>::Balance {
+    
+	pub enum Event<T> where B = <T as pallet_balances::Config>::Balance,AccountId = <T as frame_system::Config>::AccountId {
 		// Just a normal `enum`, here's a dummy event to ensure it compiles.
 		/// Dummy event, just here so there's a generic type that's used.
 		Dummy(B),

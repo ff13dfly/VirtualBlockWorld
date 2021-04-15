@@ -1,6 +1,6 @@
 [package]
 name = "pallet-vbw"
-version = "0.1.0"
+version = "0.3.0"
 authors = ["Fuu<ff13dfly@163.com>"]
 edition = "2018"
 license = "Unlicense"

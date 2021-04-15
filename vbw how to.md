@@ -6,7 +6,33 @@ frame/example-offchain-worker/
 frame/example-parallel
 ## substrate version 3.0.0
 
-Need to check the version of dependencies.
+1.find 'Cargo.toml' in substrate root folder, add "frame/vbw" to [workspace]=>members;
+
+2.find 'bin/node/runtime/Cargo.toml'
+
+add "pallet-vbw = { version = "0.3.0", default-features = false, path = "../../../frame/vbw" }" after "[dependencies]"
+
+3.find 'bin/node/runtime/src/lib.rs'
+
+add follow code without any notes.
+
+`impl pallet_vbw::Trait for Runtime {
+​    type Event = Event;
+}`
+
+add  in 'construct_runtime' expression
+
+"VBW: pallet_vbw::{Module, Call, Storage, Event<T>},"
+
+4.now,you can run the VBW node with option "--listen-addr" to bind the right IP;
+
+options needed "--ws-external" ,details [https://stackoverflow.com/questions/57753969/kusama-provided-host-header-is-not-whitelisted?r=SearchResults]
+
+5.run the folllow command to run substrate node:
+`cargo run --bin substrate  --  --dev  -d ~/Desktop/www/vbw/db --offchain-worker --execution=NativeElseWasm`
+
+6.Need to check the version of dependencies.
+
 ## substrate versoin 2.0.0.rc5
 get the release verion of substrate (https://github.com/paritytech/substrate/releases)
 
