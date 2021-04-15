@@ -1046,6 +1046,7 @@ construct_runtime!(
 		Assets: pallet_assets::{Module, Call, Storage, Event<T>},
 		Mmr: pallet_mmr::{Module, Storage},
 		Lottery: pallet_lottery::{Module, Call, Storage, Event<T>},
+		VBW: pallet_vbw::{Module, Call, Storage, Event<T>},
 	}
 );
 
@@ -1323,6 +1324,10 @@ impl_runtime_apis! {
 		) -> Option<Vec<(Vec<u8>, KeyTypeId)>> {
 			SessionKeys::decode_into_raw_public_keys(&encoded)
 		}
+	}
+	
+	impl pallet_vbw::Trait for Runtime {
+		type Event = Event;
 	}
 
 	#[cfg(feature = "runtime-benchmarks")]

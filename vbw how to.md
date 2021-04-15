@@ -1,5 +1,13 @@
 # substrate how to add pallet
 
+The best way to add vbw to substrate is following the official example
+frame/example/
+frame/example-offchain-worker/
+frame/example-parallel
+## substrate version 3.0.0
+
+Need to check the version of dependencies.
+## substrate versoin 2.0.0.rc5
 get the release verion of substrate (https://github.com/paritytech/substrate/releases)
 
 1.find 'Cargo.toml' in substrate root folder, add "frame/vbw" to [workspace]=>members;
@@ -31,6 +39,8 @@ options needed "--ws-external" ,details [https://stackoverflow.com/questions/577
 
 # polkadot how to add page
 
+## polkadot version 0.86.2
+## polkadot version 0.49.1
 get the release verion of polkadot (https://github.com/polkadot-js/apps/releases/)
 
 1.run "yarn install" in the right folder (install yarn tool first);
