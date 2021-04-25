@@ -37,7 +37,7 @@ mod tests;
 //type BalanceOf<T> = <T as pallet_balances::Trait>::Balance;
 
 /// `frame_system::Trait` should always be included in our implied traits.
-pub trait Trait: pallet_balances::Config {
+pub trait Config: pallet_balances::Config {
 
 	/// The overarching event type.
 	type Event: From<Event<Self>> + Into<<Self as frame_system::Config>::Event>;
@@ -115,7 +115,7 @@ impl Default for Setting {
 }
 
 decl_storage! {
-	trait Store for Module<T: Trait> as VBW {
+	trait Store for Module<T: Config> as VBW {
 		
 		// autoincrement world id
         WorldCount get(fn world_count) config():u32=0;
@@ -158,7 +158,7 @@ decl_event!(
 
 decl_module! {
 	// Simple declaration of the `Module` type. Lets the macro know what its working on.
-	pub struct Module<T: Trait> for enum Call where origin: T::Origin {
+	pub struct Module<T: Config> for enum Call where origin: T::Origin {
 
 		fn deposit_event() = default;
 
@@ -316,7 +316,7 @@ decl_module! {
 // - Public interface. These are functions that are `pub` and generally fall into inspector
 // functions that do not write to storage and operation functions that do.
 // - Private functions. These are your usual private utilities unavailable to other pallets.
-impl<T: Trait> Module<T> {
+impl<T: Config> Module<T> {
 	//#[allow(dead_code)]
     // fn check_range(x: u32, y: u32, dx: u32, dy: u32) -> bool {
     //     if x == 0 || y == 0 {

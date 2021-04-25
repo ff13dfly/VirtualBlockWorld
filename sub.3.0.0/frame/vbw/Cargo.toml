@@ -7,7 +7,7 @@ license = "Unlicense"
 homepage = "https://github.com/ff13dfly/VirtualBlockWorld/bluemap/en.md"
 repository = "https://github.com/ff13dfly/VirtualBlockWorld/"
 description = "VBW pallet"
-
+readme = "README.md"
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]

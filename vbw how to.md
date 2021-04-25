@@ -16,7 +16,7 @@ add "pallet-vbw = { version = "0.3.0", default-features = false, path = "../../.
 
 add follow code without any notes.
 
-`impl pallet_vbw::Trait for Runtime {
+`impl pallet_vbw::Config for Runtime {
 ​    type Event = Event;
 }`
 
